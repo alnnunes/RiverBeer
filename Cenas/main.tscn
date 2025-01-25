@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://ccmnb3t6icxxn"]
+
+[ext_resource type="Script" path="res://Scripts/Main.gd" id="1_r3lf7"]
+[ext_resource type="PackedScene" uid="uid://c5g3slc4qc0a4" path="res://Cenas/PipePair.tscn" id="2_oa1rm"]
+[ext_resource type="PackedScene" uid="uid://dq67voo3rj3yn" path="res://Cenas/Player.tscn" id="3_t1nn8"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_r3lf7")
+pipe_scene = ExtResource("2_oa1rm")
+
+[node name="PipePair" parent="." instance=ExtResource("2_oa1rm")]
+position = Vector2(1192, 0)
+
+[node name="Player" parent="." instance=ExtResource("3_t1nn8")]
+position = Vector2(136, 316)
+scale = Vector2(0.25, 0.25)

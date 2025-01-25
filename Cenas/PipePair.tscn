@@ -1,0 +1,31 @@
+[gd_scene load_steps=4 format=3 uid="uid://c5g3slc4qc0a4"]
+
+[ext_resource type="Script" path="res://Scripts/PipePair.gd" id="1_s1kxa"]
+[ext_resource type="Texture2D" uid="uid://cyiw6hrdgfj1q" path="res://essa.png" id="2_13pu0"]
+[ext_resource type="Texture2D" uid="uid://drsx4pnxuyx6x" path="res://essaa.png" id="3_0acde"]
+
+[node name="PipePair" type="Node2D"]
+position = Vector2(1192, -78)
+scale = Vector2(0.75, 0.75)
+script = ExtResource("1_s1kxa")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
+position = Vector2(4, 743)
+texture = ExtResource("2_13pu0")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+physics_interpolation_mode = 1
+position = Vector2(2.93323, -3.05176e-05)
+scale = Vector2(0.96875, 1)
+polygon = PackedVector2Array(-56, 969.333, 58.6666, 965.333, 56, 717.333, 40, 688, 25.3334, 512, -20, 510.667, -33.3334, 682.667, -58.6666, 722.667)
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="."]
+
+[node name="Sprite2D2" type="Sprite2D" parent="StaticBody2D2"]
+position = Vector2(-1, 10)
+texture = ExtResource("3_0acde")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D2"]
+polygon = PackedVector2Array(-54.6666, -220, 56, -218.667, 58.6666, 30.6667, 36, 66.6667, 22.6666, 240, -22.6666, 237.333, -34.6666, 66.6667, -53.3334, 32)
